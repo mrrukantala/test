@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services : BE - User Management</title>
+<link href="styles/site.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page-container">
+<div class="page-header">
+<h1 class="page-title">BE - User Management</h1>
+<p>Confluence Page ID: 3216573065</p>
+</div>
+<div class="page-metadata">
+<div class="page-creator">
+  Created by: (Latif) Abdurrahman Lathief
+ </div>
+<div class="page-updated">
+  Last updated by: Unknown on Feb 10, 2025
+ </div>
+</div>
+<div class="confluence-content main-content">
+<div class="toc-macro client-side-toc-macro conf-macro output-block" data-hasbody="false" data-headerelements="H1,H2,H3,H4,H5,H6,H7" data-layout="default" data-local-id="02ca70a4-4de3-4bb3-8cfa-c2cb6d6bc13c" data-macro-id="fb235448-c259-413a-8104-d68cea7a5beb" data-macro-name="toc">
+<div class="generated-toc">
+<ul>
+<li>
+<a href="#BE-UserManagement-Basic">
+     Basic
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-Language">
+     Language
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-SLO/SLI">
+     SLO / SLI
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-ArchitectureDiagram">
+     Architecture Diagram
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-MainFlows">
+     Main Flows
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-UserManagement-Login">
+     Login
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-UserManagement-Register">
+     Register
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-UserManagement-Profile">
+     Profile
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-UserManagement-Logout">
+     Logout
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-Notes">
+     Notes
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-Dependencies">
+     Dependencies
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-UserManagement-Internal">
+     Internal
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-UserManagement-External">
+     External
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-Firewall">
+     Firewall
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-Monitoring&amp;Logging">
+     Monitoring &amp; Logging
+    </a>
+</li>
+<li>
+<a href="#BE-UserManagement-CapacityPlanning">
+     Capacity Planning
+    </a>
+</li>
+</ul>
+</div>
+</div>
+<h1 id="BE-UserManagement-Basic">
+ Basic
+</h1>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="e0651106-0a57-4f0e-9ff6-d970bfba3633">
+<colgroup>
+<col style="width: 131.0px;"/>
+<col style="width: 629.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="confluenceTd">
+<p>
+      Name
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      BE User Management Service
+     </p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Status
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-complete conf-macro output-inline" data-hasbody="false" data-macro-id="7177b168-5a67-4756-a52e-082cdac44003" data-macro-name="status">
+       DEVELOPMENT
+      </span>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Repo
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<a class="external-link" href="https://gitlab.playcourt.id/telkom-digital/dpe/scalable-codebase/backend/codebase-golang" rel="nofollow">
+       https://gitlab.playcourt.id/telkom-digital/dpe/scalable-codebase/backend/codebase-golang
+      </a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Tribe
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<span class="status-macro aui-lozenge aui-lozenge-visual-refresh conf-macro output-inline" data-hasbody="false" data-macro-id="66549518-e1ea-4d8b-bd36-168832352cff" data-macro-name="status">
+       DPE
+      </span>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Squad
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<span class="status-macro aui-lozenge aui-lozenge-visual-refresh conf-macro output-inline" data-hasbody="false" data-macro-id="6fc53d47-a758-420b-b6f8-9da372c89d83" data-macro-name="status">
+       STANDARDIZATION
+      </span>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Description
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      This service handle all user management function (login, registration, logout, profile)
+     </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="BE-UserManagement-Language">
+ Language
+</h1>
+<p>
+ Go
+</p>
+<h1 id="BE-UserManagement-SLO/SLI">
+ SLO / SLI
+</h1>
+<p>
+ Availability &gt;= 99.95%
+</p>
+<p>
+ Error Rate &lt; 0.1%
+</p>
+<h1 id="BE-UserManagement-ArchitectureDiagram">
+ Architecture Diagram
+</h1>
+<img alt="Diagram (Auto-detected)" class="gliffy-diagram auto-detect" src="images/arch-userManagement.png" style="max-width: 100%; height: auto;" title="arch-userManagement"/>
+<h1 id="BE-UserManagement-MainFlows">
+ Main Flows
+</h1>
+<h2 id="BE-UserManagement-Login">
+<strong>
+  Login
+ </strong>
+</h2>
+<img alt="Diagram (Auto-detected)" class="gliffy-diagram auto-detect" src="images/Seq-Login_Register.png" style="max-width: 100%; height: auto;" title="Seq-Login%26Register"/>
+<h2 id="BE-UserManagement-Register">
+<strong>
+  Register
+ </strong>
+</h2>
+<img alt="Diagram (Auto-detected)" class="gliffy-diagram auto-detect" src="images/seq-register.png" style="max-width: 100%; height: auto;" title="seq-register"/>
+<p>
+</p>
+<h2 id="BE-UserManagement-Profile">
+<strong>
+  Profile
+ </strong>
+</h2>
+<img alt="Diagram (Auto-detected)" class="gliffy-diagram auto-detect" src="images/seq-profile.png" style="max-width: 100%; height: auto;" title="seq-Profile"/>
+<h2 id="BE-UserManagement-Logout">
+<strong>
+  Logout
+ </strong>
+</h2>
+<img alt="Diagram (Auto-detected)" class="gliffy-diagram auto-detect" src="images/seq-Logout.png" style="max-width: 100%; height: auto;" title="seq-Logout"/>
+<h1 id="BE-UserManagement-Notes">
+ Notes
+</h1>
+<ul>
+<li>
+<p>
+   PII within
+   <code>
+<span class="inline-comment-marker" data-ref="f921f050-eff9-4083-946f-f36a83d10581">
+     users
+    </span>
+</code>
+   collection will be encrypted
+  </p>
+<ul>
+<li>
+<p>
+     fullname, email, password
+    </p>
+</li>
+<li>
+<p>
+     using Telkom DBT encryption modul:
+     <a class="external-link" href="https://gitlab.playcourt.id/telkom-digital/dpe/modules/go/pii-encryption/encryption" rel="nofollow">
+      https://gitlab.playcourt.id/telkom-digital/dpe/modules/go/pii-encryption/encryption
+     </a>
+     (
+     <strong>
+<span class="inline-comment-marker" data-ref="f921f050-eff9-4083-946f-f36a83d10581">
+       aes gcm
+      </span>
+</strong>
+     )
+    </p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="BE-UserManagement-Dependencies">
+ Dependencies
+</h1>
+<h2 id="BE-UserManagement-Internal">
+ Internal
+</h2>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="ab726a5d-3a11-4e82-bc35-f9ab7f02ef4f">
+<colgroup>
+<col style="width: 255.0px;"/>
+<col style="width: 252.0px;"/>
+<col style="width: 253.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<th class="confluenceTh">
+<p>
+<strong>
+       Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       For
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Impact of down
+      </strong>
+</p>
+</th>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      MongoDB
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      Storing data
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      System error
+     </p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Redis
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      Storing user active session
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      Login Failed
+     </p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Kafka
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      Real-time streaming data pipelines
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      System can’t send email
+     </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="BE-UserManagement-External">
+ External
+</h2>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="71cbe959-8cdd-434c-8231-1bec42d1a166">
+<colgroup>
+<col style="width: 383.0px;"/>
+<col style="width: 377.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<th class="confluenceTh">
+<p>
+<strong>
+       Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       For
+      </strong>
+</p>
+</th>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="BE-UserManagement-Firewall">
+ Firewall
+</h1>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="fca0ce55-8d27-4369-8d56-bee6d9400ec5">
+<colgroup>
+<col style="width: 198.0px;"/>
+<col style="width: 108.0px;"/>
+<col style="width: 207.0px;"/>
+<col style="width: 107.0px;"/>
+<col style="width: 140.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<th class="confluenceTh">
+<p>
+<strong>
+       Source Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Source Port
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Destination Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Destination Port
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Description
+      </strong>
+</p>
+</th>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="BE-UserManagement-Monitoring&amp;Logging">
+ Monitoring &amp; Logging
+</h1>
+<p>
+<em>
+<span data-colorid="pg5fenlfy7">
+   Link monitoring &amp; logging tools &amp; dashboard
+  </span>
+</em>
+</p>
+<h1 id="BE-UserManagement-CapacityPlanning">
+ Capacity Planning
+</h1>
+<p>
+<em>
+<span data-colorid="i1kugm124x">
+   Describe long-term &amp; short-term plans
+  </span>
+</em>
+</p>
+</div>
+</div>
+</body>
+</html>

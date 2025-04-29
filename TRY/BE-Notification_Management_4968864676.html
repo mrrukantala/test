@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services : BE - Notification Management</title>
+<link href="styles/site.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page-container">
+<div class="page-header">
+<h1 class="page-title">BE - Notification Management</h1>
+<p>Confluence Page ID: 3221127299</p>
+</div>
+<div class="page-metadata">
+<div class="page-creator">
+  Created by: (Latif) Abdurrahman Lathief
+ </div>
+<div class="page-updated">
+  Last updated by: Unknown on Mar 14, 2023
+ </div>
+</div>
+<div class="confluence-content main-content">
+<div class="toc-macro client-side-toc-macro conf-macro output-block" data-hasbody="false" data-headerelements="H1,H2,H3,H4,H5,H6,H7" data-layout="default" data-local-id="02ca70a4-4de3-4bb3-8cfa-c2cb6d6bc13c" data-macro-id="fb235448-c259-413a-8104-d68cea7a5beb" data-macro-name="toc">
+<div class="generated-toc">
+<ul>
+<li>
+<a href="#BE-NotificationManagement-Basic">
+     Basic
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-Language">
+     Language
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-SLO/SLI">
+     SLO / SLI
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-ArchitectureDiagram">
+     Architecture Diagram
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-MainFlows">
+     Main Flows
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-Notes">
+     Notes
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-Dependencies">
+     Dependencies
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-NotificationManagement-Internal">
+     Internal
+    </a>
+</li>
+<li style="margin-left: 20px;">
+<a href="#BE-NotificationManagement-External">
+     External
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-Firewall">
+     Firewall
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-Monitoring&amp;Logging">
+     Monitoring &amp; Logging
+    </a>
+</li>
+<li>
+<a href="#BE-NotificationManagement-CapacityPlanning">
+     Capacity Planning
+    </a>
+</li>
+</ul>
+</div>
+</div>
+<h1 id="BE-NotificationManagement-Basic">
+ Basic
+</h1>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="e0651106-0a57-4f0e-9ff6-d970bfba3633">
+<colgroup>
+<col style="width: 131.0px;"/>
+<col style="width: 629.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="confluenceTd">
+<p>
+      Name
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      BE Notification Management Service
+     </p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Status
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<span class="status-macro aui-lozenge aui-lozenge-visual-refresh aui-lozenge-complete conf-macro output-inline" data-hasbody="false" data-macro-id="7177b168-5a67-4756-a52e-082cdac44003" data-macro-name="status">
+       DEVELOPMENT
+      </span>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Repo
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<a class="external-link" href="https://gitlab.playcourt.id/telkom-digital/dpe/scalable-codebase/backend/notification-management" rel="nofollow">
+       https://gitlab.playcourt.id/telkom-digital/dpe/scalable-codebase/backend/notification-management
+      </a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Tribe
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<span class="status-macro aui-lozenge aui-lozenge-visual-refresh conf-macro output-inline" data-hasbody="false" data-macro-id="66549518-e1ea-4d8b-bd36-168832352cff" data-macro-name="status">
+       DPE
+      </span>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Squad
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+<span class="status-macro aui-lozenge aui-lozenge-visual-refresh conf-macro output-inline" data-hasbody="false" data-macro-id="6fc53d47-a758-420b-b6f8-9da372c89d83" data-macro-name="status">
+       STANDARDIZATION
+      </span>
+</p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Description
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      This services handle functions related to delivering notification to users (otp, push notification, in-app notification, etc)
+     </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="BE-NotificationManagement-Language">
+ Language
+</h1>
+<p>
+ Go
+</p>
+<h1 id="BE-NotificationManagement-SLO/SLI">
+ SLO / SLI
+</h1>
+<p>
+ Availability &gt;= 99.95%
+</p>
+<p>
+ Error Rate &lt; 0.1%
+</p>
+<h1 id="BE-NotificationManagement-ArchitectureDiagram">
+ Architecture Diagram
+</h1>
+<img alt="Diagram (Auto-detected)" class="gliffy-diagram auto-detect" src="images/DPE_Codebase_-_service_arch_-_notification.png" style="max-width: 100%; height: auto;" title="DPE+Codebase+-+service+arch+-+notification"/>
+<h1 id="BE-NotificationManagement-MainFlows">
+ Main Flows
+</h1>
+<h1 id="BE-NotificationManagement-Notes">
+ Notes
+</h1>
+<ul>
+<li>
+<p>
+</p>
+</li>
+</ul>
+<h1 id="BE-NotificationManagement-Dependencies">
+ Dependencies
+</h1>
+<h2 id="BE-NotificationManagement-Internal">
+ Internal
+</h2>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="ab726a5d-3a11-4e82-bc35-f9ab7f02ef4f">
+<colgroup>
+<col style="width: 255.0px;"/>
+<col style="width: 252.0px;"/>
+<col style="width: 253.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<th class="confluenceTh">
+<p>
+<strong>
+       Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       For
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Impact of down
+      </strong>
+</p>
+</th>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      MongoDB
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      Storing data
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      System error
+     </p>
+</td>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Kafka
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      Real-time streaming data pipelines
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      System can’t send email
+     </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="BE-NotificationManagement-External">
+ External
+</h2>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="71cbe959-8cdd-434c-8231-1bec42d1a166">
+<colgroup>
+<col style="width: 255.0px;"/>
+<col style="width: 252.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<th class="confluenceTh">
+<p>
+<strong>
+       Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       For
+      </strong>
+</p>
+</th>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+      Google SMTP
+     </p>
+</td>
+<td class="confluenceTd">
+<p>
+      Send OTP
+     </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="BE-NotificationManagement-Firewall">
+ Firewall
+</h1>
+<div class="table-wrap">
+<table class="confluenceTable" data-layout="default" data-local-id="fca0ce55-8d27-4369-8d56-bee6d9400ec5">
+<colgroup>
+<col style="width: 198.0px;"/>
+<col style="width: 108.0px;"/>
+<col style="width: 207.0px;"/>
+<col style="width: 107.0px;"/>
+<col style="width: 140.0px;"/>
+</colgroup>
+<tbody>
+<tr>
+<th class="confluenceTh">
+<p>
+<strong>
+       Source Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Source Port
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Destination Name
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Destination Port
+      </strong>
+</p>
+</th>
+<th class="confluenceTh">
+<p>
+<strong>
+       Description
+      </strong>
+</p>
+</th>
+</tr>
+<tr>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+<td class="confluenceTd">
+<p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="BE-NotificationManagement-Monitoring&amp;Logging">
+ Monitoring &amp; Logging
+</h1>
+<p>
+<em>
+<span data-colorid="pbubq8i054">
+   Link monitoring &amp; logging tools &amp; dashboard
+  </span>
+</em>
+</p>
+<h1 id="BE-NotificationManagement-CapacityPlanning">
+ Capacity Planning
+</h1>
+<p>
+<em>
+<span data-colorid="aghgg1wfjo">
+   Describe long-term &amp; short-term plans
+  </span>
+</em>
+</p>
+</div>
+</div>
+</body>
+</html>
